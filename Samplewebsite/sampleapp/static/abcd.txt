@@ -1,0 +1,58 @@
+#pwordtb:hover, #pwordtb:focus{
+width:250px;
+height:30px;
+text-align:center;
+border-radius:4px;
+background:#fff;
+box-shadow:2px 2px 20px #565858;
+}
+
+#unametb:hover ,#unametb:focus{
+width:250px;
+height:30px;
+
+border-radius:4px;
+background:#fff;
+text-align:center;
+box-shadow:2px 2px 20px #565858;
+}
+
+#submitbtn:hover, #submitbtn:focus{
+background:#fff;
+border:0px;
+width:250px;
+height:30px;
+text-align:center;
+
+
+font-family: 'Source Sans Pro', sans-serif;
+font-size:16px;
+font-weight:bold;
+box-shadow:2px 2px 20px #565858;
+
+}
+
+
+
+sta = con.prepareStatement("select * from ?");
+	 sta.setString(1,db);
+		rsa=sta.executeQuery();
+
+session.setAttribute("dabase",dab);
+			session.setAttribute("dbbase",dbb);
+			session.setAttribute("dcbase",dcb);
+string dab=rsa.getString(1);
+			string dbb=rsa.getString(2);
+			string dcb=rsa.getString(3);
+
+
+
+http://stackoverflow.com/questions/18997285/how-to-display-a-database-table-on-to-the-table-in-the-jsp-page
+
+http://stackoverflow.com/questions/11312155/how-to-use-a-tablename-variable-for-a-java-prepared-statement-insert
+
+http://stackoverflow.com/questions/10298794/resultset-getstring1-throws-java-sql-sqlexception-invalid-operation-at-curren
+
+http://www.codemiles.com/jsp-examples/login-using-jsp-servlets-and-database-following-mvc-t10898.html
+
+https://www.youtube.com/watch?v=IZ6fgcBkhg8

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript" src="static/js/jquery-1.11.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+$("#unametb").focusin(function(){
+	$(this).animate({
+        width: '400px'
+	
+        });
+
+    });
+$("#unametb").focusout(function(){
+	$(this).animate({
+        width: '300px'
+        });
+
+    });
+
+$("#pwordtb").focusin(function(){
+	$(this).animate({
+        width: '250px'
+        });
+
+    });
+$("#pwordtb").focusout(function(){
+	$(this).animate({
+        width: '200px'
+        });
+
+    });
+$("#submitbtn").mouseover(function(){
+	$(this).animate({
+        width: '250px'
+        });
+
+    });
+$("#submitbtn").mouseout(function(){
+	$(this).animate({
+        width: '200px'
+        });
+
+    });
+
+});
+	
+
+</script>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+body{
+padding:0;
+margin:0;
+background: url("/static/images/back.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+#main{
+width:100%;
+height:400px;
+position:relative;
+top:100px;
+border-radius:6px;
+margin: auto;
+font-family: 'Source Sans Pro', sans-serif;
+box-shadow:-2px 5px 25px #565858;
+overflow:hidden;
+text-align:center;
+
+}
+#outerform1{
+width:100%;
+height:150px;
+background:#51B1A3;
+ 
+color:#fff;
+overflow:hidden;
+padding :0 0 40;
+margin-top:60;
+float:left;
+}
+#outerform2{
+width:100%;
+height:90px;
+background:#51B1A3;
+
+color:#fff;
+ovreflow:hidden;
+float:left;
+}
+#formdata{
+width:100%;
+height:310px;
+background:#51B1A3;
+color:#fff;
+float:left;
+
+ovreflow:hidden;
+
+}
+h1{
+font-size:28px;
+padding-top:10px;
+padding-left:20px;
+font-family: 'Source Sans Pro', sans-serif;
+}
+h2{
+font-size:22px;
+font-family: 'Source Sans Pro', sans-serif;
+padding-left:20px;
+}
+#unametb{
+width:300px;
+height:30px;
+text-align:center;
+border:0px solid #222;
+border-radius:4px;
+background:#E0E4E3;
+margin-left:20px;
+color:#51B1A3;
+}
+
+#pwordtb{
+width:200px;
+height:30px;
+border:0px solid #222;
+border-radius:4px;
+text-align:center;
+background:#E0E4E3;
+margin-left:20px;
+color:#51B1A3;
+}
+
+#submitbtn{
+background:#fff;
+border:0px;
+width:200px;
+height:30px;
+text-align:center;
+margin-left:20px;
+margin-top:20px;
+color:#51B1A3;
+font-family: 'Source Sans Pro', sans-serif;
+font-size:16px;
+font-weight:bold;
+border-radius:4px;
+
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+#right{
+float:right;
+width:500px;
+text-align:right;
+
+}
+#left{
+float:left;
+width:500px;
+}
+
+#browsebtn{
+background:#fff;
+border:0px;
+width:150px;
+height:30px;
+text-align:center;
+margin-left:20px;
+margin-top:20px;
+color:#51B1A3;
+font-family: 'Source Sans Pro', sans-serif;
+font-size:16px;
+font-weight:bold;
+border-radius:4px;
+}
+#filename{
+width:300px;
+height:30px;
+border:0px solid #222;
+border-radius:4px;
+text-align:center;
+background:#E0E4E3;
+margin-left:20px;
+color:#51B1A3;
+}
+</style>
+
+
+<script language="javascript" >
+
+
+document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value;
+};
+
+
+</script>
+</head>
+<body>
+
+<div id="main">
+<div id="outerform1">
+<h1> WORD TO EXCELL CONVERTER</h1>
+
+<br><br>
+</div>
+<div id="formdata">
+<form name="f1"  action="/abcd_form"  method="post">
+{% csrf_token %}
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+function HandleBrowseClick()
+{
+    var fileinput = document.getElementById("browse");
+    fileinput.click();
+}
+function Handlechange()
+{
+var fileinput = document.getElementById("browse");
+var textinput = document.getElementById("filename");
+alert($('input[type=file]').val());
+textinput.value = fileinput.value;
+textinput.value = fileinput.value;
+}
+</script>
+
+<input type="file" id="browse" name="fileupload" style="display: none" onChange="Handlechange();"/>
+<input type="text" id="filename" name="txtpath" readonly="true"/>
+<input type="button" value="Browse" id="browsebtn" onclick="HandleBrowseClick();"/>
+
+
+
+
+
+
+<br>
+<input type="submit" value="Convert" id="submitbtn"  />
+</form>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+$("#unametb").focusin(function(){
+	$(this).animate({
+        width: '250px'
+	
+        });
+
+    });
+$("#unametb").focusout(function(){
+	$(this).animate({
+        width: '200px'
+        });
+
+    });
+
+$("#pwordtb").focusin(function(){
+	$(this).animate({
+        width: '250px'
+        });
+
+    });
+$("#pwordtb").focusout(function(){
+	$(this).animate({
+        width: '200px'
+        });
+
+    });
+$("#submitbtn").mouseover(function(){
+	$(this).animate({
+        width: '250px'
+        });
+
+    });
+$("#submitbtn").mouseout(function(){
+	$(this).animate({
+        width: '200px'
+        });
+
+    });
+
+});
+	
+
+</script>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+body{
+padding:0;
+margin:0;
+background: url("back.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+#main{
+width:100%;
+height:700px;
+position:relative;
+top:0px;
+background:#51B1A3;
+border-radius:6px;
+margin: auto;
+font-family: 'Source Sans Pro', sans-serif;
+box-shadow:-2px 5px 25px #565858;
+overflow:hidden;
+text-align:center;
+
+}
+#outerform1{
+width:100%;
+height:80px;
+background:#51B1A3;
+ 
+color:#fff;
+overflow:hidden;
+
+float:left;
+}
+#outerform2{
+width:100%;
+height:90px;
+background:#51B1A3;
+
+color:#fff;
+ovreflow:hidden;
+float:left;
+}
+#formdata{
+width:100%;
+height:310px;
+background:#51B1A3;
+color:#fff;
+float:left;
+ovreflow:hidden;
+
+}
+h1{
+font-size:28px;
+padding-top:2px;
+padding-left:20px;
+color:#51B1A3;
+}
+h2{
+font-size:22px;
+font-family: 'Source Sans Pro', sans-serif;
+padding-left:20px;
+}
+#unametb{
+width:200px;
+height:30px;
+text-align:center;
+border:0px solid #222;
+border-radius:4px;
+background:#E0E4E3;
+margin-left:20px;
+color:#51B1A3;
+}
+
+#pwordtb{
+width:200px;
+height:30px;
+border:0px solid #222;
+border-radius:4px;
+text-align:center;
+background:#E0E4E3;
+margin-left:20px;
+color:#51B1A3;
+}
+
+#submitbtn{
+background:#fff;
+border:0px;
+width:200px;
+height:30px;
+text-align:center;
+margin-left:20px;
+margin-top:20px;
+color:#51B1A3;
+font-family: 'Source Sans Pro', sans-serif;
+font-size:16px;
+font-weight:bold;
+border-radius:4px;
+
+}
+
+#header{
+width:100%;
+height:70px;
+background:black;
+
+}
+#innerheader{
+width:1000px;
+height:70px;
+background:none;
+margin:auto;
+
+}
+#headerimg{
+height:70px;
+margin-left:10px;
+
+}
+#regbtn{
+	width:200px;
+height:40px;
+background: none;
+border:0;
+color:#2FB1B1;
+font-size: 20px;
+margin-top:15px;
+
+}
+#regbtn:hover,#regbtn:focus{
+	width:200px;
+height:40px;
+background:#2FB1B1;
+border:0;
+color:#fff;
+font-size: 20px;
+
+
+}
+#right{
+float:right;
+width:500px;
+text-align:right;
+
+}
+#left{
+float:left;
+width:500px;
+}
+#table1{
+align:center;
+}
+</style>
+<script language="javascript" >
+function check()
+{
+var a=uname.value();
+var b=pword.value();
+
+if(a== null  && b== null)
+{
+alert("enter username and password");
+}
+if(a==null|| b==null)
+{
+alert("enter username or password");
+}
+}
+</script>
+</head>
+<body>
+<div id="header">
+<div id="innerheader">
+<div id="left">
+<h1>Django data entry</h1>
+<!--img src="headerimg.png" id="headerimg" /-->
+</div>
+<div id="right">
+<input type="button" value="Register" id="regbtn" />
+</div>
+</div>
+</div>
+<div id="main">
+<div id="outerform1">
+
+</div>
+<div id="formdata">
+<form name="f1" action="/abcd_form" method="post">
+{% csrf_token %}
+<center>
+<table border=0 id="table1">
+<tr>
+<td>
+<h2>name</td><td>
+<input type="text" name="tname" value="name" onfocus="if(this.value=='name') this.value='';" id="unametb" />
+</h2></td></tr><tr><td><h2>age</td>
+<td><input type="text" name="tage" value="age"  onfocus="if(this.value=='age') this.value='';" id="pwordtb" /><br>
+</h2></td></tr><tr><td><h2>standard</td><td>
+<input type="text" name="tstandard" value="standard" onfocus="if(this.value=='standard') this.value='';" id="unametb" />
+</h2></td></tr><tr><td><h2>dob</td><td>
+<input type="text" name="tdob" value="dob"  onfocus="if(this.value=='dob') this.value='';" id="pwordtb" /><br>
+</h2></td></tr><tr><td><h2>rollno</td><td>
+<input type="text" name="trollno" value="rollno" onfocus="if(this.value=='rollno') this.value='';" id="unametb" />
+</h2></td></tr><tr><td><h2>school</td><td>
+<input type="text" name="tschool" value="school"  onfocus="if(this.value=='school') this.value='';" id="pwordtb" /><br>
+</h2></td></tr></table></center>
+<input type="submit" value="Save" id="submitbtn" onsubmit="check()" />
+</form>
+</div>
+
+</div>
+</body>
+</html>
