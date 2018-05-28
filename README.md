@@ -8,8 +8,8 @@
 
 ### Prerequisite
 
--Login to OpenShift
--Python should be installed 
+-  Login to OpenShift
+-  Python should be installed 
 
 ### Run
 ```
@@ -18,4 +18,4 @@ python some.py
 ```
 ### Sequence of operation 
 
-    #### Steps for Getting something
+   #### Steps for Getting something
