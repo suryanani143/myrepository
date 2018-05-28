@@ -1,12 +1,12 @@
-#sample Tool
+# sample Tool
 
   ( no need to write this line)
 
-###Overview
+### Overview
 
   Something it will do
 
-###Prerequisite
+### Prerequisite
 
 -Login to OpenShift
 -Python should be installed 
