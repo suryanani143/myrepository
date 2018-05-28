@@ -14,7 +14,6 @@
 ### Run
 ```
 python some.py
-
 ```
 ### Sequence of operation 
 #### Steps for Getting something
