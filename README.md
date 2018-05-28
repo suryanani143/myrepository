@@ -10,3 +10,6 @@
 
 -Login to OpenShift
 -Python should be installed 
+
+### Run
+'''python some.py'''
